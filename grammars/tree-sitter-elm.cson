@@ -34,8 +34,9 @@ scopes:
     'union_variant > upper_case_identifier' : 'support.type.union'
 
     'upper_case_identifier' : [
-      {match: '^(True|False)$', scopes: 'constant.boolean'}
+      {match: '^(True|False)$', scopes: 'constant.boolean'},
       {match: '^[A-Z\\d_]{2,}$', scopes: 'constant.other'},
+      'support.type.other'
     ]
 
     '''
@@ -59,7 +60,6 @@ scopes:
     type_declaration > upper_case_identifier,
     type_expression > type_ref > upper_case_qid > upper_case_identifier,
     type_annotation > type_expression > type_ref > upper_case_qid > upper_case_identifier,
-    upper_case_identifier,
     ''' : 'support.type.other'
 
     '''
@@ -68,8 +68,10 @@ scopes:
     function_call_expr > value_expr > value_qid > upper_case_identifier,
     ''' : 'support.module'
 
+    'field > lower_case_identifier' : 'entity.name.variable.field'
+
     'alias'    : 'storage.modifier.alias'
-    'type'     : 'storage.modifier.type'
+    'type'     : 'storage.modifier.ktype'
     'module'   : 'storage.modifier.module'
     'exposing' : 'storage.modifier.exposing'
     'effect'   : 'storage.modifier.effect'
@@ -86,6 +88,7 @@ scopes:
     'else > "else"'   : 'keyword.control.else'
 
     'arrow' : 'keyword.operator.arrow'
+    'pipe'  : 'keyword.operator.pipe'
     'colon' : 'keyword.operator.colon'
     'as'    : 'keyword.operator.as'
     'eq'    : 'keyword.operator.assign'
