@@ -26,7 +26,7 @@ folds: [
 ]
 
 scopes:
-    'source_file': 'source.elm'
+    'file': 'source.elm'
 
     'line_comment': 'comment.line'
     'block_comment': 'comment.block'
