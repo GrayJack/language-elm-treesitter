@@ -1,6 +1,6 @@
 {
   "name": "language-elm-treesitter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Elm support for Atom",
   "keywords": [
     "language",
