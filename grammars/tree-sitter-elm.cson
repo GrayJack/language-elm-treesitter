@@ -85,7 +85,7 @@ scopes:
     '"case"'   : 'keyword.control.case'
     '"of"'     : 'keyword.control.of'
 
-    'eq' : 'operator.assign'
-    '"not"' : 'operator.not'
-    'exposing_list > double_dot' : 'operator.other.twodots'
-    'operator_identifier' : 'operator.other'
+    'eq' : 'keyword.operator.assign'
+    '"not"' : 'keyword.operator.not'
+    'exposing_list > double_dot' : 'keyword.operator.twodots'
+    'operator_identifier' : 'keyword.operator.other'
