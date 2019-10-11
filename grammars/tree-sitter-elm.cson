@@ -89,7 +89,10 @@ scopes:
     'if > "if"'       : 'keyword.control.if'
     'in > "in"'       : 'keyword.control.in'
     'then > "then"'   : 'keyword.control.then'
-    'else > "else"'   : 'keyword.control.else'
+    '''
+    if > "else",
+    else > "else"
+    ''' : 'keyword.control.else'
 
     'arrow' : 'keyword.operator.arrow'
     'pipe'  : 'keyword.operator.pipe'
