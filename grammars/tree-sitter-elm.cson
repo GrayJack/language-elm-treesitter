@@ -90,7 +90,7 @@ scopes:
     'in > "in"'       : 'keyword.control.in'
     'then > "then"'   : 'keyword.control.then'
     '''
-    if > "else",
+    if_else_expr > "else",
     else > "else"
     ''' : 'keyword.control.else'
 
