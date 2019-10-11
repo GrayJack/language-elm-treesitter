@@ -1,0 +1,19 @@
+{
+  "name": "language-elm-treesitter",
+  "version": "0.0.0",
+  "description": "Elm support for Atom",
+  "keywords": [
+    "language",
+    "grammar",
+    "syntax",
+    "elm"
+  ],
+  "repository": "https://github.com/GrayJack/language-elm-treesitter",
+  "license": "MIT",
+  "dependencies": {
+    "tree-sitter-elm": "^2.7.1"
+  },
+  "engines": {
+    "atom": ">=1.40.0 <2.0.0"
+  }
+}

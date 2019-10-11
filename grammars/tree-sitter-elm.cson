@@ -1,0 +1,91 @@
+name: 'Elm'
+scopeName: 'source.elm'
+type: 'tree-sitter'
+parser: 'tree-sitter-elm'
+
+fileTypes: [
+  'elm'
+]
+
+comments:
+  start: '-- '
+
+folds: [
+  {
+    type: 'block_comment'
+  }
+  {
+    type: 'if_else_expr'
+  }
+  {
+    type: 'function_declaration_left'
+  }
+  {
+    type: 'case_of_expr'
+  }
+]
+
+scopes:
+    'source_file': 'source.elm'
+
+    'line_comment': 'comment.line'
+    'block_comment': 'comment.block'
+
+    'union_variant > upper_case_identifier' : 'support.type.union'
+
+    'string_constant_expr' : 'string.quoted.double'
+    'char_constant_expr' : 'string.quoted.single'
+    'number_literal' : 'constant.number'
+
+    'upper_case_identifier' : [
+      {match: '^(True|False)$', scopes: 'constant.boolean'}
+      {match: '^[A-Z\\d_]{2,}$', scopes: 'constant.other'},
+    ]
+
+    '''
+    exposing_list > exposed_value > lower_case_identifier,
+    function_declaration_left > lower_case_identifier,
+    ''' : 'entity.function.def'
+
+    '''
+    function_call_expr > value_expr > value_qid > lower_case_identifier,
+    ''' : 'entity.function.call'
+
+    '''
+    function_declaration_left > lower_pattern > lower_case_identifier
+    anonymous_function_expr > pattern > lower_pattern > lower_case_identifier,
+    ''' : 'entity.name.parameter'
+
+    '''
+    exposing_list > exposed_type > upper_case_identifier,
+    type_alias_declaration > upper_case_identifier,
+    type_declaration > upper_case_identifier,
+    type_expression > type_ref > upper_case_qid > upper_case_identifier,
+    type_annotation > type_expression > type_ref > upper_case_qid > upper_case_identifier,
+    upper_case_identifier,
+    ''' : 'support.type.other'
+
+    '''
+    module_declaration > upper_case_qid > upper_case_identifier,
+    import_clause > upper_case_qid > upper_case_identifier,
+    function_call_expr > value_expr > value_qid > upper_case_identifier,
+    ''' : 'support.module'
+
+    '"alias"'    : 'storage.modifier.alias'
+    '"let"'      : 'storage.modifier.let'
+    '"type"'     : 'storage.modifier.type'
+    '"module"'   : 'storage.modifier.module'
+    '"exposing"' : 'storage.modifier.exposing'
+
+    '"import"' : 'keyword.control.import'
+    '"if"'     : 'keyword.control.if'
+    '"in"'     : 'keyword.control.in'
+    '"then"'   : 'keyword.control.then'
+    '"else"'   : 'keyword.control.else'
+    '"case"'   : 'keyword.control.case'
+    '"of"'     : 'keyword.control.of'
+
+    'eq' : 'operator.assign'
+    '"not"' : 'operator.not'
+    'exposing_list > double_dot' : 'operator.other.twodots'
+    'operator_identifier' : 'operator.other'
