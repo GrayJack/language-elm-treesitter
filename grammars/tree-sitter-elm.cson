@@ -51,7 +51,7 @@ scopes:
     '''
     function_declaration_left > lower_pattern > lower_case_identifier,
     anonymous_function_expr > pattern > lower_pattern > lower_case_identifier,
-    ''' : 'entity.name.parameter'
+    ''' : 'entity.name.variable.parameter'
 
     '''
     exposing_list > exposed_type > upper_case_identifier,
