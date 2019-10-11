@@ -46,7 +46,7 @@ scopes:
     ''' : 'entity.name.function.def'
 
     '''
-    function_call_expr > value_expr > value_qid > lower_case_identifier:nth-child(0),
+    function_call_expr > value_expr:nth-child(0) > value_qid > lower_case_identifier,
     ''' : 'entity.name.function.call'
 
     '''
