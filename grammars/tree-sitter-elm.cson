@@ -69,7 +69,10 @@ scopes:
     function_call_expr > value_expr > value_qid > upper_case_identifier,
     ''' : 'support.module'
 
-    'field > lower_case_identifier' : 'entity.name.variable.field'
+    '''
+    field > lower_case_identifier,
+    field_type > lower_case_identifier,
+    ''' : 'entity.name.variable.field'
 
     'alias'    : 'storage.modifier.alias'
     'type'     : 'storage.modifier.ktype'
