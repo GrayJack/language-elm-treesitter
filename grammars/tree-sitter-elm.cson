@@ -52,7 +52,7 @@ scopes:
     ''' : 'entity.function.call'
 
     '''
-    function_declaration_left > lower_pattern > lower_case_identifier
+    function_declaration_left > lower_pattern > lower_case_identifier,
     anonymous_function_expr > pattern > lower_pattern > lower_case_identifier,
     ''' : 'entity.name.parameter'
 
