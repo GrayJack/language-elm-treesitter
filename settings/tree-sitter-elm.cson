@@ -1,5 +1,6 @@
 '.source.elm':
   'editor':
+    'autoIndentOnPaste': false
     'commentStart': '-- '
     'increaseIndentPattern': '(?x)
        ^ .* \\{ [^}"\']* $
@@ -21,5 +22,4 @@
       '\'\''
       '""'
       '``'
-      '<>'
     ]
