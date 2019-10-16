@@ -35,7 +35,10 @@ scopes:
     'line_comment': 'comment.line'
     'block_comment': 'comment.block'
 
-    'union_variant > upper_case_identifier' : 'support.type.union'
+    '''
+    union_variant > upper_case_identifier,
+    union_pattern > upper_case_qid > upper_case_identifier
+    ''' : 'support.type.union'
 
     'upper_case_identifier' : [
       {match: '^(True|False)$', scopes: 'constant.boolean'},
