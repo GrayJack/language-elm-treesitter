@@ -18,10 +18,13 @@ folds: [
     type: 'if_else_expr'
   }
   {
-    type: 'function_declaration_left'
+    type: 'value_declaration'
   }
   {
     type: 'case_of_expr'
+  }
+  {
+    type: 'type_annotation'
   }
 ]
 

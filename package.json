@@ -3,6 +3,8 @@
   "version": "0.2.0",
   "description": "Elm support for Atom",
   "keywords": [
+    "treesitter",
+    "tree-sitter",
     "language",
     "grammar",
     "syntax",
