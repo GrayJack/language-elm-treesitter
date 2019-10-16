@@ -11,7 +11,7 @@
   "repository": "https://github.com/GrayJack/language-elm-treesitter",
   "license": "MIT",
   "dependencies": {
-    "tree-sitter-elm": "git://github.com/Razzeee/tree-sitter-elm#fix-line_comment"
+    "tree-sitter-elm": "2.7.2"
   },
   "engines": {
     "atom": ">=1.40.0 <2.0.0"
