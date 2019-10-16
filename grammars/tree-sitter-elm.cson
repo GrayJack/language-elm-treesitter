@@ -75,6 +75,7 @@ scopes:
     '''
     field > lower_case_identifier,
     field_type > lower_case_identifier,
+    field_access_segment > lower_case_identifier,
     ''' : 'entity.name.variable.field'
 
     'alias'    : 'storage.modifier.alias'
