@@ -13,9 +13,9 @@
   "repository": "https://github.com/GrayJack/language-elm-treesitter",
   "license": "MIT",
   "dependencies": {
-    "tree-sitter-elm": "2.7.2"
+    "tree-sitter-elm": "2.7.7"
   },
   "engines": {
-    "atom": ">=1.40.0 <2.0.0"
+    "atom": ">=1.43.0 <2.0.0"
   }
 }
