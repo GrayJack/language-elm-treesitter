@@ -2,15 +2,8 @@
   'editor':
     'autoIndentOnPaste': false
     'commentStart': '-- '
-    'increaseIndentPattern': '(?x)
-       ^ .* \\{ [^}"\']* $
-      |^ .* \\( [^\\)"\']* $
-      |^ \\s* \\{ \\} $
-      '
-    'decreaseIndentPattern': '(?x)
-       ^ \\s* (\\s* /[*] .* [*]/ \\s*)* \\}
-      |^ \\s* (\\s* /[*] .* [*]/ \\s*)* \\)
-      '
+    'increaseIndentPattern': '^\\s*(let|if|else\\s+(if)|else|\\[|\\{)\\b.*:\\s*$'
+    'decreaseIndentPattern': '^\\s*(else\\s+(if)|else|\\]|\\})\\b.*:\\s*$'
     'tabLength': 4
     'softTabs': true
     'preferredLineLength': 80
