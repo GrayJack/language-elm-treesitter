@@ -1,0 +1,18 @@
+'.source.elm':
+  'editor':
+    'autoIndentOnPaste': false
+    'commentStart': '-- '
+    'increaseIndentPattern': '^\\s*(let|if|else\\s+(if)|else|\\[|\\{)\\b.*:\\s*$'
+    'decreaseIndentPattern': '^\\s*(else\\s+(if)|else|\\]|\\})\\b.*:\\s*$'
+    'tabLength': 4
+    'softTabs': true
+    'preferredLineLength': 80
+  'bracket-matcher':
+    autocompleteCharacters: [
+      '()'
+      '[]'
+      '{}'
+      '\'\''
+      '""'
+      '``'
+    ]
